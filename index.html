@@ -270,20 +270,22 @@
                     <!-- === IMAGE REPLACED WITH VIDEO === -->
                     <!-- The 'poster' is an image that shows while the video loads. -->
                     <!-- The video will autoplay, loop, and be muted. Muting is required for autoplay in most browsers. -->
-                    <video 
-                        class="hero-image" 
-                        autoplay 
-                        loop 
-                        muted 
-                        playsinline 
-                        poster="https://placehold.co/2000x1200/111111/333333?text=Loading+Video..."
-                        data-w-id="1f835257-e8f1-bb68-c813-ad3439d9a00d">
-                        
-                        <!-- === IMPORTANT: REPLACE THIS URL with the direct URL to your video file === -->
-                        <source src="https://github.com/spark-designs/spark/raw/refs/heads/main/promo.mp4" type="video/mp4">
-                        
-                        Your browser does not support the video tag.
-                    </video>
+                <video
+                    class="hero-image"
+                    autoplay
+                    loop
+                    playsinline
+                    controls
+                    poster="https://placehold.co/2000x1200/111111/333333?text=Loading+Video..."
+                    data-w-id="1f835257-e8f1-bb68-c813-ad3439d9a00d"
+                >
+                    <source
+                        src="https://github.com/spark-designs/spark/raw/refs/heads/main/promo.mp4"
+                        type="video/mp4"
+                    />
+                
+                    Your browser does not support the video tag.
+                </video>
                 </div>
             </div>
         </div>
