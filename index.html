@@ -18,14 +18,14 @@
         .wf-force-outline-none[tabindex="-1"]:focus{outline:none;}
         [text-split] {opacity: 0;}
         html.w-editor [text-split] {opacity: 1;}
-
+    
         .word {
             overflow: hidden;
             padding-bottom: 0.1em;
             margin-bottom: -0.1em;
             transform-origin: bottom;
         }
-
+    
         /* Live coding background styles */
         #coding-background {
             position: fixed;
@@ -66,8 +66,8 @@
         .code-css-property { color: #79c0ff; }
         .code-css-value { color: #ffa657; }
         .code-comment { color: #8b949e; }
-
-
+    
+    
         /* Custom styles for portfolio section */
         .portfolio-grid-wrapper {
             display: flex;
@@ -110,7 +110,7 @@
             color: #ccc;
             font-size: 0.9rem;
         }
-
+    
         /* Custom styles for new pricing section */
         .pricing-grid {
             display: grid;
@@ -138,7 +138,7 @@
             border-color: #85efac;
             box-shadow: 0 0 25px rgba(133, 239, 172, 0.2);
         }
-
+    
         .pricing-card h3 {
             font-size: 1.5rem;
             color: #fff;
@@ -155,7 +155,7 @@
             color: #aaa;
             margin-bottom: 2rem;
         }
-
+    
         .pricing-card .features-list {
             text-align: left;
             margin: 0 auto 2rem;
@@ -180,7 +180,7 @@
             text-decoration: none;
             font-weight: bold;
         }
-
+    
         /* Modern Contact Form Styles */
         .contact-section {
             background-color: #000;
@@ -216,7 +216,7 @@
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
-
+    
         /* === VIDEO STYLES === */
         /* Ensures video fills the container like the image did */
         .hero-image {
@@ -224,16 +224,37 @@
              height: 100%;
              object-fit: cover;
         }
-
+    
         @media (max-width: 991px) {
             .pricing-grid {
                 grid-template-columns: 1fr 1fr;
             }
+    
+            /* --- MOBILE FIX --- */
+            /* Reduce hero heading font size on tablets */
+            .heading-jumbo.xlarge {
+                font-size: 5rem !important; /* Use !important to override inline style */
+                line-height: 1.2;
+            }
         }
+    
         @media (max-width: 767px) {
+            /* --- MOBILE FIX --- */
+            /* Further reduce hero heading font size on phones */
+             .heading-jumbo.xlarge {
+                font-size: 3.2rem !important; /* Use !important to override inline style */
+                line-height: 1.25; /* Adjust line spacing for stacked words */
+            }
+            
+            /* Optional: Adjust paragraph size for better readability on mobile */
+            .paragraph-big {
+                font-size: 1rem; 
+            }
+    
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
+            
             /* Style to stack contact form elements on mobile */
             .contact-section .wrapper.flex {
                 flex-direction: column;
