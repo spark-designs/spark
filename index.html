@@ -67,54 +67,7 @@
         .code-css-value { color: #ffa657; }
         .code-comment { color: #8b949e; }
     
-        /* === UPDATED: Custom styles for Founder section === */
-        #founder.section.light {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .flex-founder {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            flex-direction: row-reverse; /* Puts image on the right */
-        }
-        .founder-image-wrapper {
-            flex: 0 0 45%; /* Increased size of image container */
-            max-width: 500px; /* Set a max-width for very large screens */
-        }
-        .founder-image {
-            width: 100%;
-            border-radius: 24px; /* Slightly larger radius */
-            object-fit: cover;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-        .founder-text-content {
-            flex: 1;
-        }
-        .founder-text-content .paragraph-big {
-            text-align: left;
-            max-width: 100%;
-            line-height: 1.7; /* Increased line height for readability */
-            color: #000000; /* Black text */
-        }
-        .founder-text-content .paragraph-big a {
-            color: #0056b3; /* A nice blue for links on white */
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        .founder-text-content .paragraph-big a:hover {
-            color: #007bff;
-            text-decoration: underline;
-        }
-        .founder-text-content .paragraph-big strong {
-            font-size: 2.5rem; /* Make "Meet Abraham!" heading large */
-            display: block;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            color: #000000; /* Black heading */
-        }
-
+    
         /* Custom styles for portfolio section */
         .portfolio-grid-wrapper {
             display: flex;
@@ -276,15 +229,6 @@
             .pricing-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            .flex-founder {
-                gap: 2.5rem;
-            }
-            .founder-image-wrapper {
-                flex: 0 0 40%;
-            }
-            .founder-text-content .paragraph-big strong {
-                font-size: 2rem;
-            }
     
             /* --- MOBILE FIX --- */
             /* Reduce hero heading font size on tablets */
@@ -305,20 +249,6 @@
             /* Optional: Adjust paragraph size for better readability on mobile */
             .paragraph-big {
                 font-size: 1rem; 
-            }
-
-            /* Stack founder section on mobile */
-            .flex-founder {
-                flex-direction: column; /* Stack image on top of text */
-                text-align: center;
-            }
-            .founder-image-wrapper {
-                max-width: 80%; /* Adjust size for mobile */
-                margin-bottom: 2rem;
-            }
-            .founder-text-content .paragraph-big,
-            .founder-text-content .paragraph-big strong {
-                text-align: center;
             }
     
             .pricing-grid {
@@ -348,7 +278,6 @@
             </a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                 <a href="#mission" class="nav-link w-inline-block"><div>Our Mission</div></a>
-                <a href="#founder" class="nav-link w-inline-block"><div>The Founder</div></a>
                 <a href="#services" class="nav-link w-inline-block"><div>Services</div></a>
                 <a href="#process" class="nav-link w-inline-block"><div>Our Process</div></a>
                 <a href="#portfolio" class="nav-link w-inline-block"><div>Demo Sites</div></a>
@@ -379,6 +308,8 @@
                 </div>
                 <div class="hero-image-wrapper">
                     <!-- === VIDEO WITH SOUND OPTION AND REWIND BAR === -->
+                    <!-- The 'poster' is an image that shows while the video loads. -->
+                    <!-- The video will autoplay, loop, and be muted initially, but controls allow unmute and seek. -->
                     <video
                         class="hero-image"
                         autoplay
@@ -388,7 +319,10 @@
                         controls
                         poster="https://placehold.co/2000x1200/111111/333333?text=Loading+Video..."
                         data-w-id="1f835257-e8f1-bb68-c813-ad3439d9a00d">
+
+                        <!-- === IMPORTANT: REPLACE THIS URL with the direct URL to your video file === -->
                         <source src="https://github.com/spark-designs/spark/raw/refs/heads/main/promo.mp4" type="video/mp4">
+
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -405,22 +339,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- === START: Meet The Founder Section (Updated) === -->
-        <div id="founder" class="section light wf-section">
-            <div class="wrapper flex-founder">
-                <div class="founder-image-wrapper">
-                    <img src="https://github.com/spark-designs/spark/blob/main/AB.png?raw=true" alt="Abraham, Founder of Spark" class="founder-image">
-                </div>
-                <div class="founder-text-content">
-                    <p class="paragraph-big">
-                        <strong>Meet Abraham!</strong>
-                        A 14-year-old visionary prodigy destined to change the world. While most kids are busy playing video games, Abraham is busy building empires. He’s the mastermind behind not one, but TWO game-changing brands: <a href="https://www.instagram.com/lenscraftab" target="_blank" rel="noopener noreferrer">@lenscraftab</a> and <a href="https://www.instagram.com/commercelane" target="_blank" rel="noopener noreferrer">@commercelane</a>. His grind? UNMATCHED. While you sleep, he’s brainstorming. While you chill, he’s closing deals. His work ethic is so insane, it's like he has business in his DNA. Fueled by ambition and oat milk lattes (probably), this future CEO doesn’t wait for opportunities — he creates them. For more inspiration than your feed can handle, follow the man, the myth, the mogul-in-the-making: <a href="https://www.instagram.com/sharif.ab1of1" target="_blank" rel="noopener noreferrer">@sharif.ab1of1</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- === END: Meet The Founder Section === -->
 
         <div id="services" class="section inverse wf-section">
             <div class="wrapper">
@@ -480,51 +398,57 @@
 
            <div id="portfolio" class="section inverse wf-section">
                  <div class="wrapper">
-                       <div class="block">
-                             <div class="center-items">
-                                   <div class="heading-jumbo small">Demo Sites</div>
-                             </div>
-                       </div>
-                       <div class="portfolio-grid-wrapper">
-                             <div class="portfolio-grid">
-                                   <a href="https://spark-designs.github.io/demo1/" target="_blank" class="portfolio-item">
-                                         <img src="https://github.com/spark-designs/spark/blob/main/demo1.png?raw=true" alt="Demo 1" class="portfolio-image">
-                                         <div class="portfolio-content">
-                                               <h3>Demo 1</h3>
-                                         </div>
-                                   </a>
-                                   <a href="https://spark-designs.github.io/demo2/" target="_blank" class="portfolio-item">
-                                         <img src="https://github.com/spark-designs/spark/blob/main/demo2.png?raw=true" alt="Demo 2" class="portfolio-image">
-                                         <div class="portfolio-content">
-                                               <h3>Demo 2</h3>
-                                         </div>
-                                   </a>
-                                   <a href="https://spark-designs.github.io/demo3/" target="_blank" class="portfolio-item">
-                                         <img src="https://github.com/spark-designs/spark/blob/main/demo3.png?raw=true" alt="Demo 3" class="portfolio-image">
-                                         <div class="portfolio-content">
-                                               <h3>Demo 3</h3>
-                                         </div>
-                                   </a>
-                                 <a href="https://spark-designs.github.io/demo4/" target="_blank" class="portfolio-item">
-                                         <img src="https://github.com/spark-designs/spark/blob/main/Demo4.png?raw=true" alt="Demo 6" class="portfolio-image">
-                                         <div class="portfolio-content">
-                                               <h3>Demo 4</h3>
-                                         </div>
-                                   </a>
-                                 <a href="https://spark-designs.github.io/demo5/" target="_blank" class="portfolio-item">
-                                         <img src="https://github.com/spark-designs/spark/blob/main/demo5.png?raw=true" alt="Demo 7" class="portfolio-image">
-                                         <div class="portfolio-content">
-                                               <h3>Demo 5</h3>
-                                         </div>
-                                   </a>
-                                 <a href="https://spark-designs.github.io/demo6/" target="_blank" class="portfolio-item">
-                                         <img src="https://github.com/spark-designs/spark/blob/main/demo6.png?raw=true" alt="Demo 8" class="portfolio-image">
-                                         <div class="portfolio-content">
-                                               <h3>Demo 6</h3>
-                                         </div>
-                                   </a>
-                             </div>
-                       </div>
+                     <div class="block">
+                         <div class="center-items">
+                             <div class="heading-jumbo small">Demo Sites</div>
+                         </div>
+                     </div>
+                     <div class="portfolio-grid-wrapper">
+                         <div class="portfolio-grid">
+                             <a href="https://spark-designs.github.io/demo1/" target="_blank" class="portfolio-item">
+                                 <!-- TODO: Replace with your permanent image URL -->
+                                 <img src="https://github.com/spark-designs/spark/blob/main/demo1.png?raw=true" alt="Demo 1" class="portfolio-image">
+                                 <div class="portfolio-content">
+                                     <h3>Demo 1</h3>
+                                 </div>
+                             </a>
+                             <a href="https://spark-designs.github.io/demo2/" target="_blank" class="portfolio-item">
+                                 <!-- TODO: Replace with your permanent image URL -->
+                                 <img src="https://github.com/spark-designs/spark/blob/main/demo2.png?raw=true" alt="Demo 2" class="portfolio-image">
+                                 <div class="portfolio-content">
+                                     <h3>Demo 2</h3>
+                                 </div>
+                             </a>
+                             <a href="https://spark-designs.github.io/demo3/" target="_blank" class="portfolio-item">
+                                 <!-- TODO: Replace with your permanent image URL -->
+                                   <img src="https://github.com/spark-designs/spark/blob/main/demo3.png?raw=true" alt="Demo 3" class="portfolio-image">
+                                 <div class="portfolio-content">
+                                     <h3>Demo 3</h3>
+                                 </div>
+                             </a>
+                            <a href="https://spark-designs.github.io/demo4/" target="_blank" class="portfolio-item">
+                                 <!-- TODO: Replace with your permanent image URL -->
+                                 <img src="https://github.com/spark-designs/spark/blob/main/Demo4.png?raw=true" alt="Demo 6" class="portfolio-image">
+                                 <div class="portfolio-content">
+                                     <h3>Demo 4</h3>
+                                 </div>
+                             </a>
+                            <a href="https://spark-designs.github.io/demo5/" target="_blank" class="portfolio-item">
+                                 <!-- TODO: Replace with your permanent image URL -->
+                                 <img src="https://github.com/spark-designs/spark/blob/main/demo5.png?raw=true" alt="Demo 7" class="portfolio-image">
+                                 <div class="portfolio-content">
+                                     <h3>Demo 5</h3>
+                                 </div>
+                             </a>
+                            <a href="https://spark-designs.github.io/demo6/" target="_blank" class="portfolio-item">
+                                 <!-- TODO: Replace with your permanent image URL -->
+                                 <img src="https://github.com/spark-designs/spark/blob/main/demo6.png?raw=true" alt="Demo 8" class="portfolio-image">
+                                 <div class="portfolio-content">
+                                     <h3>Demo 6</h3>
+                                 </div>
+                             </a>
+                         </div>
+                     </div>
                  </div>
            </div>
 
@@ -622,7 +546,7 @@
             <div class="wrapper">
                 <div class="block flex vertical">
                      <a href="#home" class="brand footer-brand w-nav-brand">
-                           <h3 class="logo-text inverse">Spark</h3>
+                         <h3 class="logo-text inverse">Spark</h3>
                      </a>
                 </div>
                 <div class="block flex vertical">
