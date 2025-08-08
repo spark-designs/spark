@@ -67,7 +67,44 @@
         .code-css-value { color: #ffa657; }
         .code-comment { color: #8b949e; }
     
-    
+        /* Custom styles for Founder section */
+        .flex-founder {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        .founder-image-wrapper {
+            flex: 0 0 40%;
+            max-width: 400px;
+        }
+        .founder-image {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .founder-text-content {
+            flex: 1;
+        }
+        .founder-text-content .heading-jumbo.small {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        .founder-text-content .paragraph-big {
+            text-align: left;
+            max-width: 100%;
+        }
+        .founder-text-content .paragraph-big a {
+            color: #85efac;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .founder-text-content .paragraph-big a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
         /* Custom styles for portfolio section */
         .portfolio-grid-wrapper {
             display: flex;
@@ -229,6 +266,9 @@
             .pricing-grid {
                 grid-template-columns: 1fr 1fr;
             }
+            .flex-founder {
+                gap: 2rem;
+            }
     
             /* --- MOBILE FIX --- */
             /* Reduce hero heading font size on tablets */
@@ -249,6 +289,20 @@
             /* Optional: Adjust paragraph size for better readability on mobile */
             .paragraph-big {
                 font-size: 1rem; 
+            }
+
+            /* Stack founder section on mobile */
+            .flex-founder {
+                flex-direction: column;
+                text-align: center;
+            }
+            .founder-image-wrapper {
+                max-width: 70%;
+                margin-bottom: 2rem;
+            }
+            .founder-text-content .heading-jumbo.small,
+            .founder-text-content .paragraph-big {
+                text-align: center;
             }
     
             .pricing-grid {
@@ -278,6 +332,7 @@
             </a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                 <a href="#mission" class="nav-link w-inline-block"><div>Our Mission</div></a>
+                <a href="#founder" class="nav-link w-inline-block"><div>Meet The Founder</div></a>
                 <a href="#services" class="nav-link w-inline-block"><div>Services</div></a>
                 <a href="#process" class="nav-link w-inline-block"><div>Our Process</div></a>
                 <a href="#portfolio" class="nav-link w-inline-block"><div>Demo Sites</div></a>
@@ -307,9 +362,6 @@
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
-                    <!-- === VIDEO WITH SOUND OPTION AND REWIND BAR === -->
-                    <!-- The 'poster' is an image that shows while the video loads. -->
-                    <!-- The video will autoplay, loop, and be muted initially, but controls allow unmute and seek. -->
                     <video
                         class="hero-image"
                         autoplay
@@ -320,7 +372,6 @@
                         poster="https://placehold.co/2000x1200/111111/333333?text=Loading+Video..."
                         data-w-id="1f835257-e8f1-bb68-c813-ad3439d9a00d">
 
-                        <!-- === IMPORTANT: REPLACE THIS URL with the direct URL to your video file === -->
                         <source src="https://github.com/spark-designs/spark/raw/refs/heads/main/promo.mp4" type="video/mp4">
 
                         Your browser does not support the video tag.
@@ -340,6 +391,19 @@
             </div>
         </div>
 
+        <div id="founder" class="section inverse wf-section">
+            <div class="wrapper flex-founder">
+                <div class="founder-image-wrapper">
+                    <img src="https://github.com/spark-designs/spark/blob/main/founder.png?raw=true" alt="Abraham, Founder of Spark" class="founder-image">
+                </div>
+                <div class="founder-text-content">
+                    <div class="heading-jumbo small">Meet Abraham!</div>
+                    <p class="paragraph-big">
+                        Meet Abraham — a 14-year-old visionary prodigy destined to change the world . While most kids are busy playing video games, Abraham is busy building empires. He’s the mastermind behind not one, but TWO game-changing brands: <a href="https://www.instagram.com/lenscraftab" target="_blank" rel="noopener noreferrer">@lenscraftab</a> and <a href="https://www.instagram.com/commercelane" target="_blank" rel="noopener noreferrer">@commercelane</a>. His grind? UNMATCHED. While you sleep, he’s brainstorming. While you chill, he’s closing deals. His work ethic is so insane, it's like he has business in his DNA. Fueled by ambition and oat milk lattes (probably), this future CEO doesn’t wait for opportunities — he creates them. For more inspiration than your feed can handle, follow the man, the myth, the mogul-in-the-making: <a href="https://www.instagram.com/sharif.ab1of1" target="_blank" rel="noopener noreferrer">@sharif.ab1of1</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
         <div id="services" class="section inverse wf-section">
             <div class="wrapper">
                 <div class="block">
@@ -398,57 +462,51 @@
 
            <div id="portfolio" class="section inverse wf-section">
                  <div class="wrapper">
-                     <div class="block">
-                         <div class="center-items">
-                             <div class="heading-jumbo small">Demo Sites</div>
-                         </div>
-                     </div>
-                     <div class="portfolio-grid-wrapper">
-                         <div class="portfolio-grid">
-                             <a href="https://spark-designs.github.io/demo1/" target="_blank" class="portfolio-item">
-                                 <!-- TODO: Replace with your permanent image URL -->
-                                 <img src="https://github.com/spark-designs/spark/blob/main/demo1.png?raw=true" alt="Demo 1" class="portfolio-image">
-                                 <div class="portfolio-content">
-                                     <h3>Demo 1</h3>
-                                 </div>
-                             </a>
-                             <a href="https://spark-designs.github.io/demo2/" target="_blank" class="portfolio-item">
-                                 <!-- TODO: Replace with your permanent image URL -->
-                                 <img src="https://github.com/spark-designs/spark/blob/main/demo2.png?raw=true" alt="Demo 2" class="portfolio-image">
-                                 <div class="portfolio-content">
-                                     <h3>Demo 2</h3>
-                                 </div>
-                             </a>
-                             <a href="https://spark-designs.github.io/demo3/" target="_blank" class="portfolio-item">
-                                 <!-- TODO: Replace with your permanent image URL -->
-                                   <img src="https://github.com/spark-designs/spark/blob/main/demo3.png?raw=true" alt="Demo 3" class="portfolio-image">
-                                 <div class="portfolio-content">
-                                     <h3>Demo 3</h3>
-                                 </div>
-                             </a>
-                            <a href="https://spark-designs.github.io/demo4/" target="_blank" class="portfolio-item">
-                                 <!-- TODO: Replace with your permanent image URL -->
-                                 <img src="https://github.com/spark-designs/spark/blob/main/Demo4.png?raw=true" alt="Demo 6" class="portfolio-image">
-                                 <div class="portfolio-content">
-                                     <h3>Demo 4</h3>
-                                 </div>
-                             </a>
-                            <a href="https://spark-designs.github.io/demo5/" target="_blank" class="portfolio-item">
-                                 <!-- TODO: Replace with your permanent image URL -->
-                                 <img src="https://github.com/spark-designs/spark/blob/main/demo5.png?raw=true" alt="Demo 7" class="portfolio-image">
-                                 <div class="portfolio-content">
-                                     <h3>Demo 5</h3>
-                                 </div>
-                             </a>
-                            <a href="https://spark-designs.github.io/demo6/" target="_blank" class="portfolio-item">
-                                 <!-- TODO: Replace with your permanent image URL -->
-                                 <img src="https://github.com/spark-designs/spark/blob/main/demo6.png?raw=true" alt="Demo 8" class="portfolio-image">
-                                 <div class="portfolio-content">
-                                     <h3>Demo 6</h3>
-                                 </div>
-                             </a>
-                         </div>
-                     </div>
+                       <div class="block">
+                             <div class="center-items">
+                                   <div class="heading-jumbo small">Demo Sites</div>
+                             </div>
+                       </div>
+                       <div class="portfolio-grid-wrapper">
+                             <div class="portfolio-grid">
+                                   <a href="https://spark-designs.github.io/demo1/" target="_blank" class="portfolio-item">
+                                         <img src="https://github.com/spark-designs/spark/blob/main/demo1.png?raw=true" alt="Demo 1" class="portfolio-image">
+                                         <div class="portfolio-content">
+                                               <h3>Demo 1</h3>
+                                         </div>
+                                   </a>
+                                   <a href="https://spark-designs.github.io/demo2/" target="_blank" class="portfolio-item">
+                                         <img src="https://github.com/spark-designs/spark/blob/main/demo2.png?raw=true" alt="Demo 2" class="portfolio-image">
+                                         <div class="portfolio-content">
+                                               <h3>Demo 2</h3>
+                                         </div>
+                                   </a>
+                                   <a href="https://spark-designs.github.io/demo3/" target="_blank" class="portfolio-item">
+                                         <img src="https://github.com/spark-designs/spark/blob/main/demo3.png?raw=true" alt="Demo 3" class="portfolio-image">
+                                         <div class="portfolio-content">
+                                               <h3>Demo 3</h3>
+                                         </div>
+                                   </a>
+                                 <a href="https://spark-designs.github.io/demo4/" target="_blank" class="portfolio-item">
+                                         <img src="https://github.com/spark-designs/spark/blob/main/Demo4.png?raw=true" alt="Demo 6" class="portfolio-image">
+                                         <div class="portfolio-content">
+                                               <h3>Demo 4</h3>
+                                         </div>
+                                   </a>
+                                 <a href="https://spark-designs.github.io/demo5/" target="_blank" class="portfolio-item">
+                                         <img src="https://github.com/spark-designs/spark/blob/main/demo5.png?raw=true" alt="Demo 7" class="portfolio-image">
+                                         <div class="portfolio-content">
+                                               <h3>Demo 5</h3>
+                                         </div>
+                                   </a>
+                                 <a href="https://spark-designs.github.io/demo6/" target="_blank" class="portfolio-item">
+                                         <img src="https://github.com/spark-designs/spark/blob/main/demo6.png?raw=true" alt="Demo 8" class="portfolio-image">
+                                         <div class="portfolio-content">
+                                               <h3>Demo 6</h3>
+                                         </div>
+                                   </a>
+                             </div>
+                       </div>
                  </div>
            </div>
 
@@ -461,7 +519,6 @@
                     </div>
                 </div>
                 <div class="pricing-grid">
-                    <!-- Basic Plan -->
                     <div class="pricing-card">
                         <h3>Basic</h3>
                         <div class="price">$199</div>
@@ -475,7 +532,6 @@
                         </ul>
                         <a href="#contact" class="button inverse w-button">Contact</a>
                     </div>
-                    <!-- Advanced Plan -->
                     <div class="pricing-card">
                         <h3>Advanced</h3>
                         <div class="price">$199 + $49/mo</div>
@@ -489,7 +545,6 @@
                         </ul>
                         <a href="#contact" class="button inverse w-button">Contact</a>
                     </div>
-                    <!-- Professional Plan -->
                     <div class="pricing-card professional">
                         <h3>Professional</h3>
                         <div class="price">$349 + $49/mo</div>
@@ -520,7 +575,6 @@
                 </div>
                 <div class="half-block">
                     <div class="form-block">
-                        <!-- Formspree Integration START -->
                         <form id="contact-form" name="contact-form" action="https://formspree.io/f/movwpken" method="POST" class="form contact-form" aria-label="Contact Form">
                             <label for="Your-name" class="label">Name</label>
                             <input type="text" class="text-field inverse margin-bottom w-input" maxlength="256" name="name" data-name="Your name" placeholder="Enter your name" id="Your-name">
@@ -530,7 +584,6 @@
                             <textarea placeholder="Enter your message" maxlength="5000" id="Message" name="message" data-name="Message" class="text-field inverse large w-input"></textarea>
                             <input type="submit" value="Send Message" data-wait="Please wait..." class="button wide margin-top w-button">
                         </form>
-                        <!-- Formspree Integration END -->
                         <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form 2 success">
                             <div class="paragraph-small">Thank you! Your submission has been received!</div>
                         </div>
@@ -546,7 +599,7 @@
             <div class="wrapper">
                 <div class="block flex vertical">
                      <a href="#home" class="brand footer-brand w-nav-brand">
-                         <h3 class="logo-text inverse">Spark</h3>
+                           <h3 class="logo-text inverse">Spark</h3>
                      </a>
                 </div>
                 <div class="block flex vertical">
@@ -631,7 +684,7 @@
                 // CSS Snippet
                 [ { text: '.hero-section ', className: 'code-css-selector' }, { text: '{\n' }, { text: '    display', className: 'code-css-property' }, { text: ': ', className: '' }, { text: 'flex', className: 'code-css-value' }, { text: ';\n' }, { text: '    align-items', className: 'code-css-property' }, { text: ': ', className: '' }, { text: 'center', className: 'code-css-value' }, { text: ';\n' }, { text: '    background', className: 'code-css-property' }, { text: ': ', className: '' }, { text: 'linear-gradient(45deg, #85efac, #58a6ff)', className: 'code-css-value' }, { text: ';\n}' } ],
                 // HTML Snippet
-                [ { text: '<!-- Main hero banner -->\n', className: 'code-comment' }, { text: '<', className: '' }, { text: 'div ', className: 'code-tag' }, { text: 'class=', className: 'code-attr-name' }, { text: '"hero-banner"', className: 'code-attr-value' }, { text: '>\n', className: '' }, { text: '    <', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>Welcome to Spark</', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>\n', className: '' }, { text: '</', className: '' }, { text: 'div', className: 'code-tag' }, { text: '>', className: '' } ],
+                [ { text: '\n', className: 'code-comment' }, { text: '<', className: '' }, { text: 'div ', className: 'code-tag' }, { text: 'class=', className: 'code-attr-name' }, { text: '"hero-banner"', className: 'code-attr-value' }, { text: '>\n', className: '' }, { text: '    <', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>Welcome to Spark</', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>\n', className: '' }, { text: '</', className: '' }, { text: 'div', className: 'code-tag' }, { text: '>', className: '' } ],
                  // React/JSX Snippet
                 [ { text: 'import ', className: 'code-js-keyword' }, { text: 'React ', className: 'code-js-variable' }, { text: 'from ', className: 'code-js-keyword' }, { text: "'react'", className: 'code-js-string' }, { text: ';\n\n' }, { text: 'const ', className: 'code-js-keyword' }, { text: 'Hero ', className: 'code-js-variable' }, { text: '= () ', className: '' }, { text: '=> ', className: 'code-js-keyword' }, { text: '(\n  <', className: '' }, { text: 'div ', className: 'code-tag' }, { text: 'className=', className: 'code-attr-name' }, { text: '"hero"', className: 'code-attr-value' }, { text: '>\n  <', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>Spark</', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>\n  </', className: '' }, { text: 'div', className: 'code-tag' }, { text: '>\n);\n\n' }, { text: 'export default ', className: 'code-js-keyword' }, { text: 'Hero', className: 'code-js-variable' }, { text: ';', className: '' }, ]
             ];
