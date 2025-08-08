@@ -67,42 +67,52 @@
         .code-css-value { color: #ffa657; }
         .code-comment { color: #8b949e; }
     
-        /* Custom styles for Founder section */
+        /* === UPDATED: Custom styles for Founder section === */
+        #founder.section.light {
+            background-color: #ffffff;
+            color: #000000;
+        }
         .flex-founder {
             display: flex;
             align-items: center;
             gap: 4rem;
+            flex-direction: row-reverse; /* Puts image on the right */
         }
         .founder-image-wrapper {
-            flex: 0 0 40%;
-            max-width: 400px;
+            flex: 0 0 45%; /* Increased size of image container */
+            max-width: 500px; /* Set a max-width for very large screens */
         }
         .founder-image {
             width: 100%;
-            border-radius: 16px;
+            border-radius: 24px; /* Slightly larger radius */
             object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
         .founder-text-content {
             flex: 1;
         }
-        .founder-text-content .heading-jumbo.small {
-            text-align: left;
-            margin-bottom: 1.5rem;
-        }
         .founder-text-content .paragraph-big {
             text-align: left;
             max-width: 100%;
+            line-height: 1.7; /* Increased line height for readability */
+            color: #000000; /* Black text */
         }
         .founder-text-content .paragraph-big a {
-            color: #85efac;
+            color: #0056b3; /* A nice blue for links on white */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s ease;
         }
         .founder-text-content .paragraph-big a:hover {
-            color: #fff;
+            color: #007bff;
             text-decoration: underline;
+        }
+        .founder-text-content .paragraph-big strong {
+            font-size: 2.5rem; /* Make "Meet Abraham!" heading large */
+            display: block;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: #000000; /* Black heading */
         }
 
         /* Custom styles for portfolio section */
@@ -267,7 +277,13 @@
                 grid-template-columns: 1fr 1fr;
             }
             .flex-founder {
-                gap: 2rem;
+                gap: 2.5rem;
+            }
+            .founder-image-wrapper {
+                flex: 0 0 40%;
+            }
+            .founder-text-content .paragraph-big strong {
+                font-size: 2rem;
             }
     
             /* --- MOBILE FIX --- */
@@ -293,15 +309,15 @@
 
             /* Stack founder section on mobile */
             .flex-founder {
-                flex-direction: column;
+                flex-direction: column; /* Stack image on top of text */
                 text-align: center;
             }
             .founder-image-wrapper {
-                max-width: 70%;
+                max-width: 80%; /* Adjust size for mobile */
                 margin-bottom: 2rem;
             }
-            .founder-text-content .heading-jumbo.small,
-            .founder-text-content .paragraph-big {
+            .founder-text-content .paragraph-big,
+            .founder-text-content .paragraph-big strong {
                 text-align: center;
             }
     
@@ -332,7 +348,7 @@
             </a>
             <nav role="navigation" class="nav-menu w-nav-menu">
                 <a href="#mission" class="nav-link w-inline-block"><div>Our Mission</div></a>
-                <a href="#founder" class="nav-link w-inline-block"><div>Meet The Founder</div></a>
+                <a href="#founder" class="nav-link w-inline-block"><div>The Founder</div></a>
                 <a href="#services" class="nav-link w-inline-block"><div>Services</div></a>
                 <a href="#process" class="nav-link w-inline-block"><div>Our Process</div></a>
                 <a href="#portfolio" class="nav-link w-inline-block"><div>Demo Sites</div></a>
@@ -362,6 +378,7 @@
                     </div>
                 </div>
                 <div class="hero-image-wrapper">
+                    <!-- === VIDEO WITH SOUND OPTION AND REWIND BAR === -->
                     <video
                         class="hero-image"
                         autoplay
@@ -371,9 +388,7 @@
                         controls
                         poster="https://placehold.co/2000x1200/111111/333333?text=Loading+Video..."
                         data-w-id="1f835257-e8f1-bb68-c813-ad3439d9a00d">
-
                         <source src="https://github.com/spark-designs/spark/raw/refs/heads/main/promo.mp4" type="video/mp4">
-
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -391,19 +406,22 @@
             </div>
         </div>
 
-        <div id="founder" class="section inverse wf-section">
+        <!-- === START: Meet The Founder Section (Updated) === -->
+        <div id="founder" class="section light wf-section">
             <div class="wrapper flex-founder">
                 <div class="founder-image-wrapper">
-                    <img src="https://github.com/spark-designs/spark/blob/main/founder.png?raw=true" alt="Abraham, Founder of Spark" class="founder-image">
+                    <img src="https://github.com/spark-designs/spark/raw/main/AB.jpeg" alt="Abraham, Founder of Spark" class="founder-image">
                 </div>
                 <div class="founder-text-content">
-                    <div class="heading-jumbo small">Meet Abraham!</div>
                     <p class="paragraph-big">
-                        Meet Abraham — a 14-year-old visionary prodigy destined to change the world . While most kids are busy playing video games, Abraham is busy building empires. He’s the mastermind behind not one, but TWO game-changing brands: <a href="https://www.instagram.com/lenscraftab" target="_blank" rel="noopener noreferrer">@lenscraftab</a> and <a href="https://www.instagram.com/commercelane" target="_blank" rel="noopener noreferrer">@commercelane</a>. His grind? UNMATCHED. While you sleep, he’s brainstorming. While you chill, he’s closing deals. His work ethic is so insane, it's like he has business in his DNA. Fueled by ambition and oat milk lattes (probably), this future CEO doesn’t wait for opportunities — he creates them. For more inspiration than your feed can handle, follow the man, the myth, the mogul-in-the-making: <a href="https://www.instagram.com/sharif.ab1of1" target="_blank" rel="noopener noreferrer">@sharif.ab1of1</a>.
+                        <strong>Meet Abraham!</strong>
+                        A 14-year-old visionary prodigy destined to change the world. While most kids are busy playing video games, Abraham is busy building empires. He’s the mastermind behind not one, but TWO game-changing brands: <a href="https://www.instagram.com/lenscraftab" target="_blank" rel="noopener noreferrer">@lenscraftab</a> and <a href="https://www.instagram.com/commercelane" target="_blank" rel="noopener noreferrer">@commercelane</a>. His grind? UNMATCHED. While you sleep, he’s brainstorming. While you chill, he’s closing deals. His work ethic is so insane, it's like he has business in his DNA. Fueled by ambition and oat milk lattes (probably), this future CEO doesn’t wait for opportunities — he creates them. For more inspiration than your feed can handle, follow the man, the myth, the mogul-in-the-making: <a href="https://www.instagram.com/sharif.ab1of1" target="_blank" rel="noopener noreferrer">@sharif.ab1of1</a>.
                     </p>
                 </div>
             </div>
         </div>
+        <!-- === END: Meet The Founder Section === -->
+
         <div id="services" class="section inverse wf-section">
             <div class="wrapper">
                 <div class="block">
@@ -519,6 +537,7 @@
                     </div>
                 </div>
                 <div class="pricing-grid">
+                    <!-- Basic Plan -->
                     <div class="pricing-card">
                         <h3>Basic</h3>
                         <div class="price">$199</div>
@@ -532,6 +551,7 @@
                         </ul>
                         <a href="#contact" class="button inverse w-button">Contact</a>
                     </div>
+                    <!-- Advanced Plan -->
                     <div class="pricing-card">
                         <h3>Advanced</h3>
                         <div class="price">$199 + $49/mo</div>
@@ -545,6 +565,7 @@
                         </ul>
                         <a href="#contact" class="button inverse w-button">Contact</a>
                     </div>
+                    <!-- Professional Plan -->
                     <div class="pricing-card professional">
                         <h3>Professional</h3>
                         <div class="price">$349 + $49/mo</div>
@@ -575,6 +596,7 @@
                 </div>
                 <div class="half-block">
                     <div class="form-block">
+                        <!-- Formspree Integration START -->
                         <form id="contact-form" name="contact-form" action="https://formspree.io/f/movwpken" method="POST" class="form contact-form" aria-label="Contact Form">
                             <label for="Your-name" class="label">Name</label>
                             <input type="text" class="text-field inverse margin-bottom w-input" maxlength="256" name="name" data-name="Your name" placeholder="Enter your name" id="Your-name">
@@ -584,6 +606,7 @@
                             <textarea placeholder="Enter your message" maxlength="5000" id="Message" name="message" data-name="Message" class="text-field inverse large w-input"></textarea>
                             <input type="submit" value="Send Message" data-wait="Please wait..." class="button wide margin-top w-button">
                         </form>
+                        <!-- Formspree Integration END -->
                         <div class="success-message w-form-done" tabindex="-1" role="region" aria-label="Email Form 2 success">
                             <div class="paragraph-small">Thank you! Your submission has been received!</div>
                         </div>
@@ -684,7 +707,7 @@
                 // CSS Snippet
                 [ { text: '.hero-section ', className: 'code-css-selector' }, { text: '{\n' }, { text: '    display', className: 'code-css-property' }, { text: ': ', className: '' }, { text: 'flex', className: 'code-css-value' }, { text: ';\n' }, { text: '    align-items', className: 'code-css-property' }, { text: ': ', className: '' }, { text: 'center', className: 'code-css-value' }, { text: ';\n' }, { text: '    background', className: 'code-css-property' }, { text: ': ', className: '' }, { text: 'linear-gradient(45deg, #85efac, #58a6ff)', className: 'code-css-value' }, { text: ';\n}' } ],
                 // HTML Snippet
-                [ { text: '\n', className: 'code-comment' }, { text: '<', className: '' }, { text: 'div ', className: 'code-tag' }, { text: 'class=', className: 'code-attr-name' }, { text: '"hero-banner"', className: 'code-attr-value' }, { text: '>\n', className: '' }, { text: '    <', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>Welcome to Spark</', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>\n', className: '' }, { text: '</', className: '' }, { text: 'div', className: 'code-tag' }, { text: '>', className: '' } ],
+                [ { text: '<!-- Main hero banner -->\n', className: 'code-comment' }, { text: '<', className: '' }, { text: 'div ', className: 'code-tag' }, { text: 'class=', className: 'code-attr-name' }, { text: '"hero-banner"', className: 'code-attr-value' }, { text: '>\n', className: '' }, { text: '    <', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>Welcome to Spark</', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>\n', className: '' }, { text: '</', className: '' }, { text: 'div', className: 'code-tag' }, { text: '>', className: '' } ],
                  // React/JSX Snippet
                 [ { text: 'import ', className: 'code-js-keyword' }, { text: 'React ', className: 'code-js-variable' }, { text: 'from ', className: 'code-js-keyword' }, { text: "'react'", className: 'code-js-string' }, { text: ';\n\n' }, { text: 'const ', className: 'code-js-keyword' }, { text: 'Hero ', className: 'code-js-variable' }, { text: '= () ', className: '' }, { text: '=> ', className: 'code-js-keyword' }, { text: '(\n  <', className: '' }, { text: 'div ', className: 'code-tag' }, { text: 'className=', className: 'code-attr-name' }, { text: '"hero"', className: 'code-attr-value' }, { text: '>\n  <', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>Spark</', className: '' }, { text: 'h1', className: 'code-tag' }, { text: '>\n  </', className: '' }, { text: 'div', className: 'code-tag' }, { text: '>\n);\n\n' }, { text: 'export default ', className: 'code-js-keyword' }, { text: 'Hero', className: 'code-js-variable' }, { text: ';', className: '' }, ]
             ];
